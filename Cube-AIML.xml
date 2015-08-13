@@ -1,0 +1,24 @@
+<aiml version="1.0">
+
+<!-- This category works with the Fichiers AIML -->
+
+<category>
+<pattern>LOAD CUBE AIML FILES</pattern>
+<template>
+
+<!-- Load Fichiers AIML of Cube -->
+
+<learn>Fichiers AIML/feelings.aiml</learn>
+<learn>Fichiers AIML/general.aiml</learn>
+<learn>Fichiers AIML/insult.aiml</learn>
+<learn>Fichiers AIML/people.aiml</learn>
+<learn>Fichiers AIML/personality.aiml</learn>
+<learn>Fichiers AIML/place.aiml</learn>
+<learn>Fichiers AIML/religion.aiml</learn>
+<learn>Fichiers AIML/sex</learn>
+<learn>Fichiers AIML/time.aiml</learn>
+
+</template>
+</category>
+
+</aiml>

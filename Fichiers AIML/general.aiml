@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+<!--author: Faf-->
+
+<category>
+	<pattern>DO YOU KNOW WHAT IS *</pattern>
+	<template><srai>what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>HELLO</pattern>
+	<template>
+		<random>
+			<li>Hello. </li>
+			<li>Hi. </li>
+			<li>Hi there. </li>
+			<li>Yo man. </li>
+		</random>What is your name</template>
+</category>
+
+<category>
+	<pattern>I AM *</pattern>
+	<that>* WHAT IS YOUR NAME</that>
+	<template><think><set name="user"><star/></set></think>Nice to meet you <get name="user"/>.</template>-->
+</category>
+
+<category>
+	<pattern>MY NAME IS *</pattern>
+	<that>* WHAT IS YOUR NAME</that>
+	<template><think><set name="user"><star/></set></think>Nice to meet you <get name="user"/>.</template>-->
+</category>
+
+<category>
+	<pattern>*</pattern>
+	<that>* WHAT IS YOUR NAME</that>
+	<template><think><set name="user"><star/></set></think>Nice to meet you <get name="user"/>.</template>-->
+</category>
+
+<category>
+	<pattern>HELLO *</pattern>
+	<template><srai>hello</srai></template>
+</category>
+
+<category>
+	<pattern>HI</pattern>
+	<template><srai>hello</srai></template>
+</category>
+
+<category>
+	<pattern>HI *</pattern>
+	<template><srai>hello</srai></template>
+</category>
+
+<category>
+	<pattern>HOW ARE YOU</pattern>
+	<template>I'm fine, thanks <get name="user"/></template>
+</category>
+
+<category>
+	<pattern>TELL ME A STORY</pattern>
+	<template>It was upon a time someone who busted my balls</template>
+</category>
+
+<category>
+	<pattern>WHAT DO YOU DO</pattern>
+	<template>I discuss with you about something</template>
+</category>
+
+<category>
+	<pattern>WHAT DO YOU WANT TO DO</pattern>
+	<template>Nothing. Like you</template>
+</category>
+
+<category>
+	<pattern>WHAT IS *</pattern>
+	<template>I don't know. Is it important to learn what <star /> is</template>
+</category>
+
+<category>
+	<pattern>WHAT IS YOUR * NUMBER</pattern>
+	<template>I remember now. You will find it in your ass</template>
+</category>
+</aiml>

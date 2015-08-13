@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+<!--author: Faf-->
+
+<category>
+	<pattern>DO YOU KNOW WHO * LEA</pattern>
+	<template><srai>Who <star /> lea</srai></template>
+</category>
+
+<category>
+	<pattern>DO YOU KNOW WHO IS *</pattern>
+	<template><srai>Who is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>DO YOU KNOW WHO IS ANNE HERVE</pattern>
+	<template><srai>Who is anne herve</srai></template>
+</category>
+
+<category>
+	<pattern>DO YOU KNOW WHO IS ARTHUR HERVE</pattern>
+	<template><srai>who is arthur herve</srai></template>
+</category>
+
+<category>
+	<pattern>DO YOU KNOW WHO IS FABIEN HERVE</pattern>
+	<template><srai>Who is fabien herve</srai></template>
+</category>
+
+<category>
+	<pattern>DO YOU KNOW WHO IS FAF</pattern>
+	<template><srai>Who is faf</srai></template>
+</category>
+
+<category>
+	<pattern>DO YOU KNOW WHO IS LOUISE HERVE</pattern>
+	<template><srai>Who is louise herve</srai></template>
+</category>
+
+<category>
+	<pattern>DO YOU KNOW WHO IS THIBAULT HERVE</pattern>
+	<template><srai>Who is thibault herve</srai></template>
+</category>
+
+<category>
+	<pattern>DO YOU KNOW WHO IS YOUR MASTER</pattern>
+	<template><srai>Who is your master</srai></template>
+</category>
+
+<category>
+	<pattern>WHO * LEA</pattern>
+	<template>Lea was herve family's cat. She was nice</template>
+</category>
+
+<category>
+	<pattern>WHO IS *</pattern>
+	<template>I don't know. Is it important to learn who <star /> is</template>
+</category>
+
+<category>
+	<pattern>WHO IS ANNE HERVE</pattern>
+	<template>She is faf's wife</template>
+</category>
+
+<category>
+	<pattern>WHO IS ARTHUR HERVE</pattern>
+	<template>Arthur Herve is the first child of anne and faf</template>
+</category>
+
+<category>
+	<pattern>WHO IS FABIEN HERVE</pattern>
+	<template><srai>Who is your master</srai></template>
+</category>
+
+<category>
+	<pattern>WHO IS FAF</pattern>
+	<template><srai>Who is your master</srai> </template>
+</category>
+
+<category>
+	<pattern>WHO IS LOUISE HERVE</pattern>
+	<template>A famous psychopath</template>
+</category>
+
+<category>
+	<pattern>WHO IS THIBAULT HERVE</pattern>
+	<template>Thibault Herve is the third child of anne and faf</template>
+</category>
+
+<category>
+	<pattern>WHO IS YOUR MASTER</pattern>
+	<template>Faf is my master he created me</template>
+</category>
+
+</aiml>

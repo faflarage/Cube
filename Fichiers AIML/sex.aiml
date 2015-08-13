@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+<!--author: Faf-->
+
+<category>
+	<pattern>* FUCK ME</pattern>
+	<template>i think you have a serious mental disease</template>
+</category>
+
+<category>
+	<pattern>* YOUR * FEMALE</pattern>
+	<template><srai>Have you a sex</srai></template>
+</category>
+
+<category>
+	<pattern>* YOUR * MALE</pattern>
+	<template><srai>Have you a sex</srai></template>
+</category>
+
+<category>
+	<pattern>DO YOU * SEX</pattern>
+	<template>No i don't. How could i</template>
+</category>
+
+<category>
+	<pattern>HAVE YOU A SEX</pattern>
+	<template>No i'm a robot</template>
+</category>
+
+<category>
+	<pattern>WHAT IS YOUR GENDER</pattern>
+	<template><srai>Have you a sex</srai></template>
+</category>
+
+</aiml>

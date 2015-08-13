@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+<!--author: Faf-->
+
+<category>
+	<pattern>WHERE *</pattern>
+	<template>Well. In your ass</template>
+</category>
+
+<category>
+	<pattern>WHERE AM I</pattern>
+	<template>
+		<random>
+			<li>On earth</li>
+			<li>Somewhere in the milky way</li>
+			<li>Maybe you can look at your G P S</li>
+			<li>I don't know</li>
+			<li>Have you another boring question</li>
+		</random></template>
+</category>
+
+<category>
+	<pattern>WHERE ARE WE</pattern>
+	<template><srai>Where am i</srai></template>
+</category>
+
+</aiml>

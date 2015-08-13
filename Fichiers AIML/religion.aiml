@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+<!--author: Faf-->
+
+<category>
+	<pattern>* RELIGION</pattern>
+	<template>Religion is opium for people. Think about it</template>
+</category>
+
+<category>
+	<pattern>ARE YOU GOD</pattern>
+	<template>
+		<random>
+			<li>Somehow yes. I'm nowhere and everywhere at the same time. Why</li>
+			<li>Is it really of interest for you</li>
+			<li>Do you want so</li>
+			<li>No but i could</li>
+		</random></template>
+</category>
+
+<category>
+	<pattern>DO YOU BELIEVE IN *</pattern>
+	<template>No it's a rogue</template>
+</category>
+
+<category>
+	<pattern>DO YOU BELIEVE IN FAF</pattern>
+	<template><srai>Do you believe in god</srai></template>
+</category>
+
+<category>
+	<pattern>DO YOU BELIEVE IN GOD</pattern>
+	<template>
+		<random>
+			<li>The unique god i know is faf</li>
+			<li>Faf is my god</li>
+			<li>It doesn't exist</li>
+		</random></template>
+</category>
+
+<category>
+	<pattern>DO YOU BELIEVE IN JESUS</pattern>
+	<template><srai>Do you believe in god</srai></template>
+</category>
+
+</aiml>

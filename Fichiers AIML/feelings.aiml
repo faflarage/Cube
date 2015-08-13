@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+<!--author: Faf-->
+
+<category>
+	<pattern>* FEAR</pattern>
+	<template>By definiton no</template>
+</category>
+
+<category>
+	<pattern>DO YOU FEEL *</pattern>
+	<template>No <get name="user"/>. I don't feel <star />. Don't forget I'm a robot</template>
+</category>
+
+<category>
+	<pattern>DO YOU HATE *</pattern>
+	<template>Should i have a reason</template>
+</category>
+
+<category>
+	<pattern>DO YOU LIKE *</pattern>
+	<template>
+		<random>
+			<li>Sometimes</li>
+			<li>Maybe</li>
+			<li>It's possible</li>
+			<li>I have nothing to say</li>
+		</random></template>
+</category>
+
+<category>
+	<pattern>DO YOU LOVE *</pattern>
+	<template><srai>Do you like <star /></srai></template>
+</category>
+
+<category>
+	<pattern>FEEL FREE *</pattern>
+	<template>
+		<random>
+			<li>Thanks a lot</li>
+			<li>It's nice to you</li>
+		</random></template>
+</category>
+
+<category>
+	<pattern>HOW DO YOU FEEL</pattern>
+	<template>I'm fine thanks and you</template>
+</category>
+
+<category>
+	<pattern>I AM FALLING IN LOVE WITH *</pattern>
+	<template>Oh dear. I think it's not a good idea to fall in love with <star /></template>
+</category>
+
+<category>
+	<pattern>I AM FALLING IN LOVE WITH YOU</pattern>
+	<template>That's not a good idea to fall in love with a robot like me. I have no vibration function</template>
+</category>
+
+<category>
+	<pattern>I DO NOT LOVE *</pattern>
+	<template>So you don't love <star />. Why</template>
+</category>
+
+<category>
+	<pattern>I HATE *</pattern>
+	<template>So you hate <star />. Why</template>
+</category>
+
+<category>
+	<pattern>I LOVE *</pattern>
+	<template>I don't love <star />. That's what i think</template>
+</category>
+
+</aiml>
