@@ -3,7 +3,7 @@ Cube's files : a versatile robot with a Raspberry Pi (model B) and an Arduino (M
 
 It's composed of : infrared sensors (3), ultrasonic sensors (3), microswitchs (2), DC motors (2), one LCD screen, a camera, a speaker, a piezzo, serial communications (2, one bluetooth between androïd phone and arduino and the other between PC and arduino) and a WIFI connexion to the web.
 
-This repository contains two arduino files (one for a serial communication with a desktop PC for testing purpose named CubePC.ino and one for a serial communication with a raspberry pi for embedded applications named CubePi.ino), two python 2.7 files (a main file named Cerveau-cube.py and the functions module named fonctions-cube.py) and AIML files for communication with humans.
+This repository contains two arduino files (one for a serial communication with a desktop PC for testing purpose in the folder named CubePC.ino and one for a serial communication with a raspberry pi for embedded applications in the folder named CubePi.ino), two python 2.7 files (a main file named Cerveau-cube.py and the functions module named fonctions-cube.py), AIML files (one folder and Cube-AIML.xml) for communication with humans and this file.
 
 The arduino manages the communication between humans (thanks to an androïd phone) and PC, the collection of sensors. He's able to do some bips via a piezzo and to print some messages via the LCD screen.
 
