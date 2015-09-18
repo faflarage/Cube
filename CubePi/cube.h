@@ -17,7 +17,7 @@
 // Déclaration des fonctions
 
 // Initialisation
-void initialisation();							// Initialisation (LCD et gyro)
+void initialisation();							// Initialisation (LCD et gyroscope (MPU6050))
 
 // Capteurs de distance
 int envoiIR(byte capteurIR);						// Fonction infrarouge

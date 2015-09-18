@@ -1,9 +1,8 @@
 /******************************************************************************************************************************************
 *                                                                                                                                         *
-*                                     CubePC.ino, Programmation de la carte Arduino Mega 2560 du cube                                    *
-*                                     Objet : Détection d'obstacles / capteurs de contacts et infrarouges                                 *
-*                                             Test nouveau protocole de communication                                                     *
-*                                     Date : 08/08/2015                                                                                   *
+*                                     CubePC.ino, Programmation de la carte Arduino Mega 2560 du cube                                     *
+*                                     Version destinee a une connexion avec un PC de bureau pour debuggage                                *
+*                                     Date : 18/09/2015                                                                                   *
 *                                                                                                                                         *
 ******************************************************************************************************************************************/
 
@@ -13,7 +12,7 @@
 // Inclusion des librairies-------------------------------------------------------
 #include <Wire.h>
 #include <LiquidCrystal.h>
-#include "cube.h"
+#include "cube.h"      // Cette librairie inclue les differentes fonctions utilisees par Cube
 
 // Déclaration des broches de l'Arduino utilisées---------------------------------
 
@@ -70,7 +69,7 @@ void setup()
 {
   // Définit les modes d'entrée ou de sorties des différentes broches--------------
 
-  // Broches du L293D
+  // Broches du L293D (pont en H pour le controle des 2 moteurs)
   pinMode(in1PinGauche, OUTPUT);
   pinMode(in2PinGauche, OUTPUT);
   pinMode(enablePinGauche, OUTPUT);
@@ -143,7 +142,7 @@ void loop()
     }
     else if (chaine == "ping")
     {
-      // Effectue un Ping gauche à droite et l'affiche
+      // Effectue un Ping gauche à droite
       distUSgauche = envoiUS(capteurUSgaucheTrig, capteurUSgaucheEcho);
       delay(10);
       distUScentre = envoiUS(capteurUScentralTrig, capteurUScentralEcho);
@@ -155,7 +154,7 @@ void loop()
     }
     else if (chaine == "ir")
     {
-      // Effectue un envoi infrarouge de gauche à droite et l'affiche
+      // Effectue un envoi infrarouge de gauche à droite
       distIRgauche = envoiIR(capteurIRgauche);
       distIRcentre = envoiIR(capteurIRcentral);
       distIRdroite = envoiIR(capteurIRdroit);

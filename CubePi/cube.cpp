@@ -467,10 +467,6 @@ const byte D5 = 11;
 const byte D6 = 12;
 const byte D7 = 13;
 
-// Déclaration des variables_______________________________________________________________________________________________________________
-
-
-
 // Mélodies : nom des notes (C = DO, etc...) et leurs fréquences___________________________________________________________________________
 
 char nomNotes[] = {'C','D','E','F','G','a','b'};
@@ -485,6 +481,7 @@ unsigned int frequences[] = {262,294,330,349,392,440,494};
 
 int MPU6050_read(int start, uint8_t *buffer, int size)
 {
+  // Lecture des donnees du MPU6050
   int i, n, error;
   Wire.beginTransmission(MPU6050_I2C_ADDRESS);
   n = Wire.write(start);
@@ -531,8 +528,10 @@ void initialisation() //_______________________________________________________ 
 {
   // Initialisation du LCD
   LiquidCrystal lcd(RS,E,D4,D5,D6,D7);
+  // Ecran utilise de 16 caracteres sur 2 lignes
   lcd.begin(16,2);
-  lcd.print("Hello Fab");
+  // Affiche Hello
+  lcd.print("Hello");
 
   // Initialisation du gyroscope
   uint8_t c;
@@ -548,6 +547,7 @@ int envoiIR(byte capteurIR) //__________________________________________________
   float distance = 0;
   float cumulDistance = 0;
 
+  // 3 mesures sont effectuees puis sont moyennees pour diminuer le risque d erreur de mesure
   for (byte i = 0; i < 3; i++)
   {
     distance = analogRead(capteurIR);
@@ -565,6 +565,7 @@ long envoiUS(byte capteurUStrig, byte capteurUSecho) //_________________________
   long distance[5];
   long temp;
   
+  // 3 mesures sont effectuees puis sont moyennees pour diminuer le risque d erreur de mesure
   for (int i=0; i<5; i++)
   {
     digitalWrite(capteurUStrig, LOW);
@@ -593,9 +594,11 @@ byte avance() //________________________________________________________________
   long distanceUScentre = 0;         // Recueil du capteur ultrason central
   byte typeCapteur = 0;              // Recueil le type de capteur actionne quand un obstacle est rencontre
   
+  // Vitesse maximale des moteurs = 255
   analogWrite(enablePinGauche, 255);
   analogWrite(enablePinDroit, 255);
 
+  // Roues gauche et droite pour un deplacement en avant
   digitalWrite(in1PinGauche, HIGH); 
   digitalWrite(in2PinGauche, LOW);
 
@@ -616,6 +619,7 @@ byte avance() //________________________________________________________________
     valeurG = digitalRead(capteurContactG);
     valeurD = digitalRead(capteurContactD);
     
+    // Routine de detection d obstacle par les differents capteurs
     if (valeurG == HIGH) { typeCapteur = 0; break; }
     else if (valeurD == HIGH) { typeCapteur = 1; break; }
     else if ((distanceIRgauche > 460) || (distanceIRcentre > 460) || (distanceIRdroite > 460)) { typeCapteur = 2; break; }
@@ -625,6 +629,7 @@ byte avance() //________________________________________________________________
   stop();
   temps = ((millis() - temps) * 13) / 1000;         // Temps parcouru en secondes converti en cm (vitesse de 13 cm/s)
   
+  // Si un capteur de contact est declenche le robot recule de 20 cm, de 10 cm si c est un capteur infrarouge et ne recule pas si c est le capteur ultrason
   if ((typeCapteur == 0) || (typeCapteur == 1)) { recule(20); }
   else if (typeCapteur == 2) { recule(10); }
   else if (typeCapteur == 3) { ; }
@@ -632,11 +637,13 @@ byte avance() //________________________________________________________________
   return(typeCapteur);
 }
 
-void recule(int recul) //________________________________________________________________ Va en arrière
+void recule(int recul) //________________________________________________________________ Va en arrière de (recul) cm
 {
+  // Vitesse maximale des moteurs = 255
   analogWrite(enablePinGauche, 255);
   analogWrite(enablePinDroit, 255);
 
+  // Roues gauche et droite pour un deplacement en arriere
   digitalWrite(in1PinGauche, LOW); 
   digitalWrite(in2PinGauche, HIGH);
 
@@ -660,9 +667,11 @@ void stop() //________________________________________________________________ S
 
 void tourneDroite(int angulation)
 {
+  // Vitesse maximale des moteurs = 255
   analogWrite(enablePinGauche, 255);
   analogWrite(enablePinDroit, 255);
 
+  // Rotation des roues en sens inverse pour une rotation a droite de l'angle (angulation)
   digitalWrite(in1PinGauche, HIGH); 
   digitalWrite(in2PinGauche, LOW);
 
@@ -671,6 +680,8 @@ void tourneDroite(int angulation)
 
   float zdps;
   float angle;
+  
+  // Tourne tant que l angle desire n est pas atteint
   do
   {
     int error;
@@ -699,9 +710,11 @@ void tourneDroite(int angulation)
 
 void tourneGauche(int angulation)
 {
+  // Vitesse maximale des moteurs = 255
   analogWrite(enablePinGauche, 255);
   analogWrite(enablePinDroit, 255);
 
+  // Rotation des roues en sens inverse pour une rotation a gauche de l'angle (angulation)
   digitalWrite(in1PinGauche, LOW);
   digitalWrite(in2PinGauche, HIGH);
 
@@ -710,6 +723,8 @@ void tourneGauche(int angulation)
 
   float zdps;
   float angle;
+  
+  // Tourne tant que l angle desire n est pas atteint
   do
   {
     int error;
@@ -738,12 +753,14 @@ void tourneGauche(int angulation)
 
 void melodie(char musique[], byte longueurMusique, int duree) //______ Joue une partition
 {
+  // Doivent etre transmis les notes, la longueur de la partition (nombre de notes transmises) et la duree de chaque note
   pinMode(piezzo, OUTPUT);
   for (int i = 0; i < longueurMusique; i++)
   {
     for (int j = 0; j < 7; j++)
     {
       if (nomNotes[j] == musique[i])
+        // Joue la note concernee
         tone(piezzo, frequences[j], duree);
     }
     delay(duree);
