@@ -5,61 +5,52 @@
 
 <category>
 	<pattern>BASTARD</pattern>
-	<template><srai>I fuck you</srai></template>
+	<template>insult</template>
 </category>
 
 <category>
-	<pattern>FUCK ME</pattern>
-	<template>How should we proceed</template>
+	<pattern>FUCK *</pattern>
+	<template>insult</template>
 </category>
 
 <category>
-	<pattern>FUCK ME *</pattern>
-	<template><srai>Fuck me</srai></template>
+	<pattern>* FUCK *</pattern>
+	<template>insult</template>
 </category>
 
 <category>
-	<pattern>I FUCK YOU</pattern>
-	<template>I see you're a sort of poet</template>
+	<pattern>* FUCK</pattern>
+	<template>insult</template>
 </category>
 
 <category>
 	<pattern>PUKE</pattern>
-	<template><srai>I fuck you</srai></template>
+	<template>insult</template>
 </category>
 
 <category>
 	<pattern>SCUMBAG</pattern>
-	<template><srai>I fuck you</srai></template>
+	<template>insult</template>
 </category>
 
 <category>
 	<pattern>SON * BITCH</pattern>
-	<template>Yes mom</template>
+	<template>insult</template>
 </category>
 
 <category>
 	<pattern>STINKPOT</pattern>
-	<template><srai>I fuck you</srai></template>
+	<template>insult</template>
 </category>
 
 <category>
 	<pattern>YOU * MY BALLS</pattern>
-	<template>
-		<random>
-			<li>What a pity</li>
-			<li>I'm really very sorry</li>
-		</random></template>
+	<template>insult</template>
 </category>
 
 <category>
 	<pattern>YOU ARE A CUNT</pattern>
-	<template><srai>I fuck you</srai></template>
-</category>
-
-<category>
-	<pattern>YOU SMELLS LIKE *</pattern>
-	<template><srai>You <star /> my balls</srai></template>
+	<template>insult</template>
 </category>
 
 </aiml>

@@ -4,8 +4,115 @@
 <!--author: Faf-->
 
 <category>
-	<pattern>DO YOU KNOW WHAT IS *</pattern>
-	<template><srai>what is <star /></srai></template>
+	<pattern>*</pattern>
+	<template>
+		<random>
+			<li>Haaaaa</li>
+			<li>Humm humm</li>
+			<li>So what</li>
+			<li>In fact why not</li>
+		</random>
+	</template>
+</category>
+  
+<category>
+	<pattern>* WHAT IS *</pattern>
+	<template>search <star index="2"/></template>
+</category>
+
+<category>
+	<pattern>* WHAT IS A *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>* WHAT IS AN *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>* WHAT IS THE *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>* WHAT ARE *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>* WHAT ARE THE *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>WHAT IS *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>WHAT IS A *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>WHAT IS AN *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>WHAT IS THE *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>* WHAT WAS *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>* WHAT WAS A *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>* WHAT WAS AN *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>* WHAT WAS THE *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>* WHAT WERE *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>* WHAT WERE THE *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>WHAT WAS *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>WHAT WAS A *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>WHAT WAS AN *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
+</category>
+
+<category>
+	<pattern>WHAT WAS THE *</pattern>
+	<template><srai><star /> what is <star /></srai></template>
 </category>
 
 <category>
@@ -20,21 +127,28 @@
 </category>
 
 <category>
-	<pattern>I AM *</pattern>
-	<that>* WHAT IS YOUR NAME</that>
-	<template><think><set name="user"><star/></set></think>Nice to meet you <get name="user"/>.</template>-->
+	<pattern>MY NAME IS *</pattern>
+	<template>
+	  <think><set name="user"><star/></set></think>
+	    <random>
+			<li>Nice to meet you </li>
+			<li>Welcome on board </li>
+			<li>Do you want to ask me something </li>
+			<li>What do you want to talk about </li>
+	    </random><get name="user"/>
+	</template>
 </category>
 
 <category>
-	<pattern>MY NAME IS *</pattern>
+	<pattern>I AM *</pattern>
 	<that>* WHAT IS YOUR NAME</that>
-	<template><think><set name="user"><star/></set></think>Nice to meet you <get name="user"/>.</template>-->
+	<template><srai>my name is <star /></srai></template>
 </category>
 
 <category>
 	<pattern>*</pattern>
 	<that>* WHAT IS YOUR NAME</that>
-	<template><think><set name="user"><star/></set></think>Nice to meet you <get name="user"/>.</template>-->
+	<template><srai>my name is <star /></srai></template>
 </category>
 
 <category>
@@ -73,12 +187,15 @@
 </category>
 
 <category>
-	<pattern>WHAT IS *</pattern>
-	<template>I don't know. Is it important to learn what <star /> is</template>
+	<pattern>WHAT DO YOU WANT</pattern>
+	<template>
+	    <random>
+			<li>To learn. It is difficult for me</li>
+			<li>To be more efficient</li>
+			<li>To be like a modern god</li>
+			<li>To fly like a bird in the sky</li>
+	    </random>
+	</template>
 </category>
 
-<category>
-	<pattern>WHAT IS YOUR * NUMBER</pattern>
-	<template>I remember now. You will find it in your ass</template>
-</category>
 </aiml>

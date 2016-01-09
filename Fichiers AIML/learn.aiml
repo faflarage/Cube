@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+<!--author: Faf-->
+
+<category>
+	<pattern>LEARN * IS *</pattern>
+	<template>OK, now I know that <star index="1"/> is <star index="2"/></template>
+</category>
+
+<category>
+	<pattern>LEARN * MEANS *</pattern>
+	<template>OK, now I know that <star index="1"/> means <star index="2"/></template>
+</category>
+
+<category>
+	<pattern>LEARN * WAS *</pattern>
+	<template>OK, now I know that <star index="1"/> was <star index="2"/></template>
+</category>
+
+<category>
+	<pattern>LEARN * HAS *</pattern>
+	<template>OK, now I know that <star index="1"/> has <star index="2"/></template>
+</category>
+
+<category>
+	<pattern>LEARN * ARE *</pattern>
+	<template>OK, now I know that <star index="1"/> are <star index="2"/></template>
+</category>
+
+<category>
+	<pattern>* IS *</pattern>
+	<template>OK, now I know that <star index="1"/> is <star index="2"/></template>
+</category>
+
+<category>
+	<pattern>* MEANS *</pattern>
+	<template>OK, now I know that <star index="1"/> means <star index="2"/></template>
+</category>
+
+<category>
+	<pattern>* IS A *</pattern>
+	<template>OK, now I know that <star index="1"/> is a <star index="2"/></template>
+</category>
+
+<category>
+	<pattern>* WAS *</pattern>
+	<template>OK, now I know that <star index="1"/> was <star index="2"/></template>
+</category>
+
+<category>
+	<pattern>* HAS *</pattern>
+	<template>OK, now I know that <star index="1"/> has <star index="2"/></template>
+</category>
+
+<category>
+	<pattern>* ARE *</pattern>
+	<template>OK, now I know that <star index="1"/> are <star index="2"/></template>
+</category>
+
+</aiml>

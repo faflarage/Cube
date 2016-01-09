@@ -1,8 +1,8 @@
 /******************************************************************************************************************************************
 *                                                                                                                                         *
 *                                     CubePC.ino, Programmation de la carte Arduino Mega 2560 du cube                                     *
-*                                     Version destinee a une connexion avec un PC de bureau pour debuggage                                *
-*                                     Date : 18/09/2015                                                                                   *
+*                                     Version destinee a etre utilisee avec un PC de bureau pour debuggage                                *
+*                                     Date : 26/12/2015                                                                                   *
 *                                                                                                                                         *
 ******************************************************************************************************************************************/
 
@@ -12,6 +12,8 @@
 // Inclusion des librairies-------------------------------------------------------
 #include <Wire.h>
 #include <LiquidCrystal.h>
+#include "I2Cdev.h"
+#include "MPU6050.h"
 #include "cube.h"      // Cette librairie inclue les differentes fonctions utilisees par Cube
 
 // Déclaration des broches de l'Arduino utilisées---------------------------------
@@ -113,15 +115,20 @@ void loop()
     chaine = "";
   }
 
-  // Lecture du PC--------------------------------------------------------------------------------------
+  // Lecture du PC---------------------------------------------------------------------------------------
   while (Serial.available() >0)
   {
     chaine = Serial.readStringUntil('\n');
     if (chaine == "forward")
     {
-      // Va en avant
+      // Va en avant jusqu a rencontrer un obstacle
       typeCapteur = avance();
       Serial.println(typeCapteur);
+    }
+    else if (chaine == "move")
+    {
+      // Va en avant
+      move();
     }
     else if (chaine == "backward")
     {
@@ -131,14 +138,19 @@ void loop()
     else if (chaine == "turnr")
     {
       // Rotation droite
-      tourneDroite(80);
+      tourneDroite(90);
       Serial.println("ok");
     }
     else if (chaine == "turnl")
     {
       // Rotation gauche
-      tourneGauche(80);
+      tourneGauche(90);
       Serial.println("ok");
+    }
+    else if (chaine == "stop")
+    {
+      // Arrete tout mouvement
+      stop();
     }
     else if (chaine == "ping")
     {

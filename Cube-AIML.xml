@@ -1,22 +1,20 @@
-<aiml version="1.0">
-
-<!-- This category works with the Fichiers AIML -->
+<aiml version='1.0'>
 
 <category>
 <pattern>LOAD CUBE AIML FILES</pattern>
 <template>
 
-<!-- Load Fichiers AIML of Cube -->
-
-<learn>Fichiers AIML/feelings.aiml</learn>
-<learn>Fichiers AIML/general.aiml</learn>
-<learn>Fichiers AIML/insult.aiml</learn>
-<learn>Fichiers AIML/people.aiml</learn>
-<learn>Fichiers AIML/personality.aiml</learn>
-<learn>Fichiers AIML/place.aiml</learn>
-<learn>Fichiers AIML/religion.aiml</learn>
-<learn>Fichiers AIML/sex</learn>
-<learn>Fichiers AIML/time.aiml</learn>
+<learn>/home/fab/Cube nouveau/Fichiers AIML/personality.aiml</learn>
+<learn>/home/fab/Cube nouveau/Fichiers AIML/learn.aiml</learn>
+<learn>/home/fab/Cube nouveau/Fichiers AIML/place.aiml</learn>
+<learn>/home/fab/Cube nouveau/Fichiers AIML/time.aiml</learn>
+<learn>/home/fab/Cube nouveau/Fichiers AIML/people.aiml</learn>
+<learn>/home/fab/Cube nouveau/Fichiers AIML/learned.aiml</learn>
+<learn>/home/fab/Cube nouveau/Fichiers AIML/insult.aiml</learn>
+<learn>/home/fab/Cube nouveau/Fichiers AIML/sex.aiml</learn>
+<learn>/home/fab/Cube nouveau/Fichiers AIML/general.aiml</learn>
+<learn>/home/fab/Cube nouveau/Fichiers AIML/religion.aiml</learn>
+<learn>/home/fab/Cube nouveau/Fichiers AIML/feelings.aiml</learn>
 
 </template>
 </category>

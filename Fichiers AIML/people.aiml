@@ -4,93 +4,298 @@
 <!--author: Faf-->
 
 <category>
-	<pattern>DO YOU KNOW WHO * LEA</pattern>
-	<template><srai>Who <star /> lea</srai></template>
+	<pattern>* WHO IS *</pattern>
+	<template>
+	  <think><set name="person"><star index="2"/></set></think>
+	  <condition>
+	    <li name="person" value="lea">Lea was herve family's cat. She was nice</li>
+	    <li name="person" value="oscar">The family's cat</li>
+	    <li name="person" value="leon">The cock</li>
+
+	    <li name="person" value="anne herve">She is faf's wife</li>
+	    <li name="person" value="arthur herve">Arthur Herve is the first child of anne and faf</li>
+	    <li name="person" value="louise herve">Louise Herve is the second child of anne and faf</li>
+	    <li name="person" value="thibault herve">Thibault Herve is the third child of anne and faf</li>
+	    <li name="person" value="faf">You are my creator</li>
+	    <li name="person" value="fabien">You are my creator</li>
+	    <li name="person" value="fabien herve">You are my creator</li>
+	    <li name="person" value="faflarage">You are my creator</li>
+	    <li name="person" value="your master">Faf is my master he created me</li>
+
+	    <li>search <get name="person"/></li>
+	  </condition>
+	</template>
 </category>
 
 <category>
-	<pattern>DO YOU KNOW WHO IS *</pattern>
-	<template><srai>Who is <star /></srai></template>
+	<pattern>* WHO ARE *</pattern>
+	<template>
+	  <think><set name="person"><star index="2"/></set></think>
+	  <srai><star /> who is <star /></srai>
+	</template>
 </category>
 
 <category>
-	<pattern>DO YOU KNOW WHO IS ANNE HERVE</pattern>
-	<template><srai>Who is anne herve</srai></template>
+	<pattern>* WHO IS A *</pattern>
+	<template>
+	  <think><set name="person"><star index="2"/></set></think>
+	  <srai><star /> who is <star /></srai>
+	</template>
 </category>
 
 <category>
-	<pattern>DO YOU KNOW WHO IS ARTHUR HERVE</pattern>
-	<template><srai>who is arthur herve</srai></template>
+	<pattern>* WHO ARE A *</pattern>
+	<template>
+	  <think><set name="person"><star index="2"/></set></think>
+	  <srai><star /> who is <star /></srai>
+	</template>
 </category>
 
 <category>
-	<pattern>DO YOU KNOW WHO IS FABIEN HERVE</pattern>
-	<template><srai>Who is fabien herve</srai></template>
+	<pattern>* WHO IS AN *</pattern>
+	<template>
+	  <think><set name="person"><star index="2"/></set></think>
+	  <srai><star /> who is <star /></srai>
+	</template>
 </category>
 
 <category>
-	<pattern>DO YOU KNOW WHO IS FAF</pattern>
-	<template><srai>Who is faf</srai></template>
+	<pattern>* WHO ARE AN *</pattern>
+	<template>
+	  <think><set name="person"><star index="2"/></set></think>
+	  <srai><star /> who is <star /></srai>
+	</template>
 </category>
 
 <category>
-	<pattern>DO YOU KNOW WHO IS LOUISE HERVE</pattern>
-	<template><srai>Who is louise herve</srai></template>
+	<pattern>* WHO IS THE *</pattern>
+	<template>
+	  <think><set name="person"><star index="2"/></set></think>
+	  <srai><star /> who is <star /></srai>
+	</template>
 </category>
 
 <category>
-	<pattern>DO YOU KNOW WHO IS THIBAULT HERVE</pattern>
-	<template><srai>Who is thibault herve</srai></template>
-</category>
-
-<category>
-	<pattern>DO YOU KNOW WHO IS YOUR MASTER</pattern>
-	<template><srai>Who is your master</srai></template>
-</category>
-
-<category>
-	<pattern>WHO * LEA</pattern>
-	<template>Lea was herve family's cat. She was nice</template>
+	<pattern>* WHO ARE THE *</pattern>
+	<template>
+	  <think><set name="person"><star index="2"/></set></think>
+	  <srai><star /> who is <star /></srai>
+	</template>
 </category>
 
 <category>
 	<pattern>WHO IS *</pattern>
-	<template>I don't know. Is it important to learn who <star /> is</template>
+	<template>
+	  <think><set name="person"><star/></set></think>
+	  <srai><star /> who is <star /></srai>
+	</template>
 </category>
 
 <category>
-	<pattern>WHO IS ANNE HERVE</pattern>
-	<template>She is faf's wife</template>
+	<pattern>WHO ARE *</pattern>
+	<template>
+	  <think><set name="person"><star/></set></think>
+	  <srai><star /> who is <star /></srai>
+	</template>
 </category>
 
 <category>
-	<pattern>WHO IS ARTHUR HERVE</pattern>
-	<template>Arthur Herve is the first child of anne and faf</template>
+	<pattern>WHO IS A *</pattern>
+	<template>
+	  <think><set name="person"><star/></set></think>
+	  <srai><star /> who is <star /></srai>
+	</template>
 </category>
 
 <category>
-	<pattern>WHO IS FABIEN HERVE</pattern>
-	<template><srai>Who is your master</srai></template>
+	<pattern>WHO ARE A *</pattern>
+	<template>
+	  <think><set name="person"><star/></set></think>
+	  <srai><star /> who is <star /></srai>
+	</template>
 </category>
 
 <category>
-	<pattern>WHO IS FAF</pattern>
-	<template><srai>Who is your master</srai> </template>
+	<pattern>WHO IS AN *</pattern>
+	<template>
+	  <think><set name="person"><star/></set></think>
+	  <srai><star /> who is <star /></srai>
+	</template>
 </category>
 
 <category>
-	<pattern>WHO IS LOUISE HERVE</pattern>
-	<template>A famous psychopath</template>
+	<pattern>WHO ARE AN *</pattern>
+	<template>
+	  <think><set name="person"><star/></set></think>
+	  <srai><star /> who is <star /></srai>
+	</template>
 </category>
 
 <category>
-	<pattern>WHO IS THIBAULT HERVE</pattern>
-	<template>Thibault Herve is the third child of anne and faf</template>
+	<pattern>WHO IS THE *</pattern>
+	<template>
+	  <think><set name="person"><star/></set></think>
+	  <srai><star /> who is <star /></srai>
+	</template>
 </category>
 
 <category>
-	<pattern>WHO IS YOUR MASTER</pattern>
-	<template>Faf is my master he created me</template>
+	<pattern>WHO ARE THE *</pattern>
+	<template>
+	  <think><set name="person"><star/></set></think>
+	  <srai><star /> who is <star /></srai>
+	</template>
+</category>
+
+<category>
+	<pattern>* WHO WAS *</pattern>
+	<template>
+	  <think><set name="person"><star index="2"/></set></think>
+	  <condition>
+	    <li name="person" value="lea">Lea was herve family's cat. She was nice</li>
+	    <li name="person" value="leon">The cock</li>
+
+	    <li>search <get name="person"/></li>
+	  </condition>
+	</template>
+</category>
+
+<category>
+	<pattern>* WHO WERE *</pattern>
+	<template>
+	  <think><set name="person"><star index="2"/></set></think>
+	  <srai><star /> who was <star /></srai>
+	</template>
+</category>
+
+<category>
+	<pattern>* WHO WAS A *</pattern>
+	<template>
+	  <think><set name="person"><star index="2"/></set></think>
+	  <srai><star /> who was <star /></srai>
+	</template>
+</category>
+
+<category>
+	<pattern>* WHO WERE A *</pattern>
+	<template>
+	  <think><set name="person"><star index="2"/></set></think>
+	  <srai><star /> who was <star /></srai>
+	</template>
+</category>
+
+<category>
+	<pattern>* WHO WAS AN *</pattern>
+	<template>
+	  <think><set name="person"><star index="2"/></set></think>
+	  <srai><star /> who was <star /></srai>
+	</template>
+</category>
+
+<category>
+	<pattern>* WHO WERE AN *</pattern>
+	<template>
+	  <think><set name="person"><star index="2"/></set></think>
+	  <srai><star /> who was <star /></srai>
+	</template>
+</category>
+
+<category>
+	<pattern>* WHO WAS THE *</pattern>
+	<template>
+	  <think><set name="person"><star index="2"/></set></think>
+	  <srai><star /> who was <star /></srai>
+	</template>
+</category>
+
+<category>
+	<pattern>* WHO WERE THE *</pattern>
+	<template>
+	  <think><set name="person"><star index="2"/></set></think>
+	  <srai><star /> who was <star /></srai>
+	</template>
+</category>
+
+<category>
+	<pattern>WHO WAS *</pattern>
+	<template>
+	  <think><set name="person"><star/></set></think>
+	  <srai><star /> who was <star /></srai>
+	</template>
+</category>
+
+<category>
+	<pattern>WHO WERE *</pattern>
+	<template>
+	  <think><set name="person"><star/></set></think>
+	  <srai><star /> who was <star /></srai>
+	</template>
+</category>
+
+<category>
+	<pattern>WHO WAS A *</pattern>
+	<template>
+	  <think><set name="person"><star/></set></think>
+	  <srai><star /> who was <star /></srai>
+	</template>
+</category>
+
+<category>
+	<pattern>WHO WERE A *</pattern>
+	<template>
+	  <think><set name="person"><star/></set></think>
+	  <srai><star /> who was <star /></srai>
+	</template>
+</category>
+
+<category>
+	<pattern>WHO WAS AN *</pattern>
+	<template>
+	  <think><set name="person"><star/></set></think>
+	  <srai><star /> who was <star /></srai>
+	</template>
+</category>
+
+<category>
+	<pattern>WHO WERE AN *</pattern>
+	<template>
+	  <think><set name="person"><star/></set></think>
+	  <srai><star /> who was <star /></srai>
+	</template>
+</category>
+
+<category>
+	<pattern>WHO WAS THE *</pattern>
+	<template>
+	  <think><set name="person"><star/></set></think>
+	  <srai><star /> who was <star /></srai>
+	</template>
+</category>
+
+<category>
+	<pattern>WHO WERE THE *</pattern>
+	<template>
+	  <think><set name="person"><star/></set></think>
+	  <srai><star /> who was <star /></srai>
+	</template>
+</category>
+
+<category>
+	<pattern>WHO AM I</pattern>
+	<template>
+	  <condition>
+	    <li name="user" value="faf">You are my creator</li>
+	    <li name="user" value="fabien">You are my creator</li>
+	    <li name="user" value="faflarage">You are my creator</li>
+	    <li name="user" value="">I don't know your name</li>
+	    <li>You already told me you were <get name="user"/></li>
+	  </condition>
+	</template>
+</category>
+
+<category>
+	<pattern>* WHO I AM</pattern>
+	<template><srai>who am i</srai></template>
 </category>
 
 </aiml>

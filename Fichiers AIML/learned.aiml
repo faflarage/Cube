@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+<!--author: Cube-->
+
+<category>
+  <pattern>IS THE SUN HOT</pattern>
+  <template>Yes, the sun is hot</template>
+</category>
+
+<category>
+  <pattern>IS THE DAY SUNNY</pattern>
+  <template>Yes, the day is sunny</template>
+</category>
+
+
+</aiml>

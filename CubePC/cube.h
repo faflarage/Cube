@@ -10,6 +10,8 @@
 
 #include <Wire.h>
 #include <LiquidCrystal.h>
+#include "I2Cdev.h"
+#include "MPU6050.h"
 
 // Inclus les définitions et constantes du language Arduino
 #include "Arduino.h"
@@ -25,6 +27,7 @@ long envoiUS(byte capteurUStrig, byte capteurUSecho);			// Fonction ultrason
 
 // Mouvements
 byte avance();
+void move();
 void recule(int recul);
 void stop();
 void tourneDroite(int angulation);
